@@ -4,6 +4,8 @@ _NOTE_: this entire demo is only expected to work on a linux installation with a
 
 [Slides](https://docs.google.com/presentation/d/1_RjTFa5qfrqdQYUvM0qNR1Gfedh2X9pLnFBU8muvFHo/edit?usp=sharing)
 
+[Shorter version given at a local Ruby user group](https://docs.google.com/presentation/d/1453dqA-ZdcdADH3RzShTRpB8Hl8XKT9GAqbT3S6hxAo/edit?usp=sharing)
+
 ## Setup
 
 Install docker and docker-compose (left up to the reader)
@@ -51,3 +53,13 @@ $ ~/opt/logstash-5.5.2/bin/logstash --debug -f logstash.conf
 ```
 
 View this inputs incomming messages!
+
+### Example Applications
+
+There are some (one) apps in the `examples/` folder. They are simple apps that send logs to graylog (not recommending you do this this way, but hey, its a quick demo).
+
+You can also use docker-compose to start them.
+
+```bash
+$ docker-compose -f docker-compose-ruby.yml up
+```

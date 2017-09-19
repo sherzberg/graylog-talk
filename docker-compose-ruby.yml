@@ -1,0 +1,14 @@
+version: '2.1'
+
+services:
+
+  ruby:
+    build: ./examples/ruby
+    command: ruby run.rb
+    ports:
+      - "4567:4567"
+    healthcheck:
+      test: curl -f http://localhost:4567/status
+      interval: 10s
+      timeout: 10s
+      retries: 2
